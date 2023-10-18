@@ -20,7 +20,8 @@ $ff-sec: var(--roboto-flex);
 
 - [x] Fazer configuração do Prettier e ESLint;
 - [x] Criar Reset CSS;
-- [ ] Criar estrutura de tipografia;
-- [ ] Estabelecer cores
+- [x] Criar estrutura de tipografia;
+- [x] Estabelecer cores
+- [ ] Estabelecer containers
 - [ ] Criar header
 - [ ]
