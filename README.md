@@ -1,3 +1,8 @@
 # Cadastro de Empresas
 
-## Como rodar o projeto
+Descrição do projeto
+
+## Como rodar este projeto
+
+- Versão do Node
+- Certifique-se que sua versão do node é a 18 ou maior
