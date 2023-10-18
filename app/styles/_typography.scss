@@ -1,0 +1,15 @@
+$ff-primary: var(--jost);
+$ff-sec: var(--roboto);
+$ff-ter: var(--roboto-flex);
+
+.a {
+	font-family: $ff-primary;
+}
+
+.b {
+	font-family: $ff-sec;
+}
+
+.c {
+	font-family: $ff-ter;
+}
