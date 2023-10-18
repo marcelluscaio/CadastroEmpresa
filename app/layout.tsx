@@ -34,8 +34,12 @@ export default function RootLayout({
 }) {
 	return (
 		<html
-			lang="en"
-			className={`${jost.variable} ${roboto.variable} ${robotoFlex.variable}`}
+			lang="pt-BR"
+			className={`
+				${jost.variable} 
+				${roboto.variable} 
+				${robotoFlex.variable} 
+				`}
 		>
 			<body>{children}</body>
 		</html>
