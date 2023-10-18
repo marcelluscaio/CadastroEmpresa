@@ -1,0 +1,36 @@
+@use "../../styles/style.scss" as *;
+
+.header {
+	padding-block: $paddingBlock-1;
+
+	background-color: $white;
+
+	box-shadow: 0px calc($paddingBlock-1/12) calc($paddingBlock-1/6) 0px
+		rgba(0, 0, 0, 0.05);
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: var(--fs-4);
+		flex-wrap: wrap;
+
+		a {
+			width: 8.8%;
+			min-width: calc(var(--fs-4) * 5.5);
+			img {
+				width: 100%;
+			}
+		}
+
+		figure {
+			display: flex;
+			align-items: center;
+			gap: var(--fs-2);
+			flex-wrap: wrap;
+			img {
+				width: calc(var(--fs-4) * 2);
+			}
+		}
+	}
+}
