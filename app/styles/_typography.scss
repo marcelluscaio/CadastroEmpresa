@@ -16,10 +16,21 @@ $lh-6: 2;
 	@return ($pixel / 16) * 1rem;
 }
 
-$fs-1: pxToRem(12);
-$fs-2: pxToRem(13);
-$fs-3: pxToRem(14);
-$fs-4: pxToRem(16);
+:root {
+	--fs-1: #{pxToRem(12)};
+	--fs-2: #{pxToRem(13)};
+	--fs-3: #{pxToRem(14)};
+	--fs-4: #{pxToRem(16)};
+}
+
+@media (min-width: 100em) {
+	:root {
+		--fs-1: #{pxToRem(16)};
+		--fs-2: #{pxToRem(20)};
+		--fs-3: #{pxToRem(22)};
+		--fs-4: #{pxToRem(24)};
+	}
+}
 
 @mixin font($fontFamily, $fontWeight, $fontSize, $lineHeight) {
 	font-family: $fontFamily;
@@ -29,7 +40,7 @@ $fs-4: pxToRem(16);
 }
 
 .primary {
-	@include font($ff-primary, $fw-1, $fs-4, $lh-3);
+	@include font($ff-primary, $fw-1, var(--fs-4), $lh-3);
 
 	&--bigLine {
 		@extend .primary;
@@ -38,7 +49,7 @@ $fs-4: pxToRem(16);
 
 	&--3 {
 		@extend .primary;
-		font-size: $fs-3;
+		font-size: var(--fs-3);
 		line-height: $lh-2;
 		&--bold {
 			@extend .primary--3;
@@ -49,17 +60,17 @@ $fs-4: pxToRem(16);
 
 	&--2 {
 		@extend .primary;
-		font-size: $fs-2;
+		font-size: var(--fs-2);
 		line-height: $lh-4;
 	}
 
 	&--1 {
 		@extend .primary;
-		font-size: $fs-1;
+		font-size: var(--fs-1);
 		line-height: $lh-4;
 	}
 }
 
 .secondary {
-	@include font($ff-secondary, $fw-1, $fs-1, $lh-6);
+	@include font($ff-secondary, $fw-1, var(--fs-1), $lh-6);
 }
