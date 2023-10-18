@@ -59,6 +59,7 @@ $fs-4: pxToRem(16);
 		line-height: $lh-4;
 	}
 }
+
 .secondary {
 	@include font($ff-secondary, $fw-1, $fs-1, $lh-6);
 }

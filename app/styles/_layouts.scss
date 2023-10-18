@@ -1,0 +1,8 @@
+@use "typography" as *;
+
+$paddingBlock-1: $fs-1;
+
+.container {
+	width: 95%;
+	margin-inline: auto;
+}

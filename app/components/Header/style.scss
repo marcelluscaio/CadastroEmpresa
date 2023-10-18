@@ -1,0 +1,30 @@
+@use "../../styles/style.scss" as *;
+
+.header {
+	background-color: $white;
+	padding-block: $paddingBlock-1;
+	box-shadow: 0px $paddingBlock-1/12 $paddingBlock-1/6 0px rgba(0, 0, 0, 0.05);
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		a {
+			width: 8.8%;
+			min-width: 5.5rem;
+			img {
+				width: 100%;
+			}
+		}
+
+		figure {
+			display: flex;
+			align-items: center;
+			gap: $fs-2;
+			img {
+				width: $fs-4 * 2;
+			}
+		}
+	}
+}
