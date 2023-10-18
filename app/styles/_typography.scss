@@ -1,18 +1,64 @@
 $ff-primary: var(--jost);
-$ff-sec: var(--roboto);
-$ff-sec: var(--roboto-flex);
+$ff-secondary: var(--roboto);
+$ff-secondary: var(--roboto-flex);
 
-$fs-1: 12rem / 16;
+$fw-1: 400;
+$fw-2: 500;
 
-.a {
-	font-family: $ff-primary;
-	font-size: $fs-1;
+$lh-1: 1;
+$lh-2: 1.15;
+$lh-3: 1.25;
+$lh-4: 1.39;
+$lh-5: 1.5;
+$lh-6: 2;
+
+@function pxToRem($pixel) {
+	@return ($pixel / 16) * 1rem;
 }
 
-.b {
-	font-family: $ff-sec;
+$fs-1: pxToRem(12);
+$fs-2: pxToRem(13);
+$fs-3: pxToRem(14);
+$fs-4: pxToRem(16);
+
+@mixin font($fontFamily, $fontWeight, $fontSize, $lineHeight) {
+	font-family: $fontFamily;
+	font-weight: $fontWeight;
+	font-size: $fontSize;
+	line-height: $lineHeight;
 }
 
-.c {
-	font-family: $ff-sec;
+.primary {
+	@include font($ff-primary, $fw-1, $fs-4, $lh-3);
+
+	&--bigLine {
+		@extend .primary;
+		line-height: $lh-5;
+	}
+
+	&--3 {
+		@extend .primary;
+		font-size: $fs-3;
+		line-height: $lh-2;
+		&--bold {
+			@extend .primary--3;
+			font-weight: $fw-2;
+			line-height: $lh-1;
+		}
+	}
+
+	&--2 {
+		@extend .primary;
+		font-size: $fs-2;
+		line-height: $lh-4;
+	}
+
+	&--1 {
+		@extend .primary;
+		font-size: $fs-1;
+		line-height: $lh-4;
+	}
+}
+.secondary {
+	@include font($ff-secondary, $fw-1, $fs-1, $lh-6);
 }

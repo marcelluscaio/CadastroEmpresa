@@ -18,7 +18,9 @@ $ff-sec: var(--roboto-flex);
 
 ## Tarefas
 
-- [ ] Estabelecer tipografia
+- [x] Fazer configuração do Prettier e ESLint;
+- [x] Criar Reset CSS;
+- [ ] Criar estrutura de tipografia;
 - [ ] Estabelecer cores
 - [ ] Criar header
 - [ ]
