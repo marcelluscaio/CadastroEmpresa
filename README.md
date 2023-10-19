@@ -48,6 +48,11 @@ $ff-sec: var(--roboto-flex);
 - [x] Estabelecer containers
 - [x] Criar componente header
 - [ ] Criar componente Filtro
+  - [x] Basic layout
+  - [x] Set handle change
+  - [x] Set label animation
+  - [x] Set focus and hover outline for accessibility
+  - [ ] Add icon
 - [ ] Criar componente Adicionar Empresa
 - [ ] Criar componente modal
 - [ ] Criar Lista de empresas

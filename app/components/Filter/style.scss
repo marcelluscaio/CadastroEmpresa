@@ -1,13 +1,17 @@
 @use "../../styles/style" as *;
 
 .filter {
-	width: fit-content;
+	width: 23.3%;
+	min-width: 10rem;
 	margin-left: auto;
 	div {
 		position: relative;
+
 		$leftSpacing: 1em;
 		$blockSpacing: 0.43em; /* (6 / 14) -> 14px de fonte base, para chegar a 6px de espacamento*/
 		$borderSize: 1px;
+		$outline: 2px;
+		$outlineOffset: $outline;
 
 		label,
 		input {
@@ -25,21 +29,32 @@
 
 		label.up {
 			transform: translateX(-$leftSpacing)
-				translateY(calc(($blockSpacing + $borderSize + 100%) * -1));
+				translateY(
+					calc(
+						($blockSpacing + $borderSize + $outline + $outlineOffset + 100%) *
+							-1
+					)
+				);
 		}
 
 		input {
+			width: 100%;
 			padding-block: $blockSpacing;
 			padding-inline: $leftSpacing 2em;
 			border: $borderSize solid $gray-100;
 			margin-top: 1.5em;
 
+			background-image: url("/search.svg");
+			background-repeat: no-repeat;
+			background-position: right $blockSpacing center;
+			background-size: var(--fs-4);
+
 			border-radius: 0.29em;
 
 			&:focus-visible,
 			&:hover {
-				outline: 2px solid $vinhoOpea;
-				outline-offset: 2px;
+				outline: $outline solid $vinhoOpea;
+				outline-offset: $outlineOffset;
 			}
 		}
 	}
