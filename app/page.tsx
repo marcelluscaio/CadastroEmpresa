@@ -1,5 +1,3 @@
-import "./index.scss";
-
 import Filter from "./components/Filter/Filter";
 import AddCompany from "./components/AddCompany/AddCompany";
 
