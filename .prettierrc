@@ -4,5 +4,7 @@
 	"useTabs": true,
 	"semi": true,
 	"singleQuote": false,
-	"singleAttributePerLine": true
+	"jsx-single-quote": false,
+	"singleAttributePerLine": true,
+	"proseWrap": "preserve"
 }

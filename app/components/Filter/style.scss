@@ -20,6 +20,12 @@
 			left: calc($leftSpacing + $borderSize);
 
 			pointer-events: none;
+			transition: transform 0.5s ease-in;
+		}
+
+		label.up {
+			transform: translateX(-$leftSpacing)
+				translateY(calc(($blockSpacing + $borderSize + 100%) * -1));
 		}
 
 		input {
@@ -29,6 +35,12 @@
 			margin-top: 1.5em;
 
 			border-radius: 0.29em;
+
+			&:focus-visible,
+			&:hover {
+				outline: 2px solid $vinhoOpea;
+				outline-offset: 2px;
+			}
 		}
 	}
 }
