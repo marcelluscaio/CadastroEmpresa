@@ -42,8 +42,8 @@ const Modal = ({ isOpen, toggleModal }: Props) => {
 				</fieldset>
 				<fieldset>
 					<button className="delete"></button>
-					<button>Cancelar</button>
-					<button>Cadastrar</button>
+					<button className="button--light primary--3--bold">Cancelar</button>
+					<button className="button primary--3--bold">Cadastrar</button>
 				</fieldset>
 			</form>
 		</dialog>
