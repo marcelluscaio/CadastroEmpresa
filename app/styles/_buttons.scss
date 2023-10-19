@@ -1,0 +1,11 @@
+@use "typography" as *;
+
+.round-corner {
+	width: 100%;
+	padding-block: calc(var(--fs-4) / 2);
+
+	$radiusBig: calc(var(--fs-4) * 2);
+	$radiusSmall: calc(var(--fs-4) / 4);
+
+	border-radius: $radiusBig $radiusSmall $radiusSmall $radiusBig;
+}
