@@ -1,6 +1,7 @@
 @use "../../styles/style.scss" as *;
 
 .round-corner.add-company {
+	margin-bottom: $marginBottom-1;
 	border: 0.1em solid $gray-100;
 
 	background-image: url("../../../public/iconLight.svg");
