@@ -7,6 +7,7 @@
 		position: relative;
 		$leftSpacing: 1em;
 		$blockSpacing: 0.43em; /* (6 / 14) -> 14px de fonte base, para chegar a 6px de espacamento*/
+		$borderSize: 1px;
 
 		label,
 		input {
@@ -15,8 +16,8 @@
 
 		label {
 			position: absolute;
-			bottom: calc($blockSpacing + 1px);
-			left: calc($leftSpacing + 1px);
+			bottom: calc($blockSpacing + $borderSize);
+			left: calc($leftSpacing + $borderSize);
 
 			pointer-events: none;
 		}
@@ -24,7 +25,10 @@
 		input {
 			padding-block: $blockSpacing;
 			padding-inline: $leftSpacing 2em;
+			border: $borderSize solid $gray-100;
 			margin-top: 1.5em;
+
+			border-radius: 0.29em;
 		}
 	}
 }
