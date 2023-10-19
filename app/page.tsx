@@ -15,7 +15,10 @@ const Home = () => {
 			<Filter id="home-filter" />
 			<AddCompany toggleModal={setModalIsOpen} />
 			<List />
-			<Modal isOpen={modalIsOpen} />
+			<Modal
+				isOpen={modalIsOpen}
+				toggleModal={setModalIsOpen}
+			/>
 		</>
 	);
 };

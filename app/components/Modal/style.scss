@@ -1,6 +1,41 @@
+@use "../../styles/style.scss" as *;
+
 .modal {
 	position: fixed;
-	top: 50%;
+	top: 30%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+
+	border: none;
+
+	background-color: $white;
+
+	border-radius: 0.25rem;
+
+	header {
+		display: flex;
+		justify-content: space-between;
+
+		$padding: var(--fs-4);
+		padding-block: calc($padding / 2);
+		padding-inline: $padding calc($padding * 3 / 4);
+
+		p {
+			color: rgba(0, 0, 0, 0.3);
+		}
+
+		button {
+			width: var(--fs-4);
+			aspect-ratio: 1;
+			border: none;
+			background-color: transparent;
+
+			background-image: url("../../../public/close.svg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 100% 100%;
+
+			cursor: pointer;
+		}
+	}
 }
