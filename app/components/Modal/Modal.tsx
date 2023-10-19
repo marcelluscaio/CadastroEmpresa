@@ -40,6 +40,11 @@ const Modal = ({ isOpen, toggleModal }: Props) => {
 					<label className="secondary">Nome</label>
 					<input className="secondary" />
 				</fieldset>
+				<fieldset>
+					<button className="delete"></button>
+					<button>Cancelar</button>
+					<button>Cadastrar</button>
+				</fieldset>
 			</form>
 		</dialog>
 	);
