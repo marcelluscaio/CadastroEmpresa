@@ -3,5 +3,8 @@
 	"tabWidth": 2,
 	"useTabs": true,
 	"semi": true,
-	"singleQuote": false
+	"singleQuote": false,
+	"jsx-single-quote": false,
+	"singleAttributePerLine": true,
+	"proseWrap": "preserve"
 }
