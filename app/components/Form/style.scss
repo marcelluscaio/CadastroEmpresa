@@ -21,5 +21,20 @@
 			border: 0.1em solid $gray-100;
 			border-radius: 0.34em;
 		}
+
+		&.buttons {
+			display: flex;
+			gap: 0.5rem;
+
+			.delete {
+				min-width: pxToRem(30);
+				aspect-ratio: 1;
+				margin-right: auto;
+
+				background-image: url("../../../public/lixo.svg");
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+			}
+		}
 	}
 }

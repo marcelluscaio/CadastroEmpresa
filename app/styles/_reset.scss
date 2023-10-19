@@ -65,3 +65,9 @@ button {
 	border: none;
 	background-color: transparent;
 }
+
+button,
+input,
+select {
+	cursor: pointer;
+}

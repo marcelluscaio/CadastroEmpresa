@@ -22,12 +22,13 @@
 }
 
 .button {
-	padding: 0.86em 0.58em;
+	padding: 0.58em 0.86em;
 	border-radius: 0.29em;
 
 	background-color: $vinhoOpea;
 
 	color: $white;
+	letter-spacing: 1px;
 
 	&--light {
 		@extend .button;

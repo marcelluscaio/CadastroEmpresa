@@ -12,7 +12,7 @@ const Form = () => {
 					key={fieldset.trim().toLocaleLowerCase()}
 				/>
 			))}
-			<fieldset>
+			<fieldset className="buttons">
 				<button className="delete"></button>
 				<button className="button--light primary--3--bold">Cancelar</button>
 				<button className="button primary--3--bold">Cadastrar</button>
