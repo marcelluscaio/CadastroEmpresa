@@ -37,10 +37,9 @@ const Modal = ({ isOpen, toggleModal }: Props) => {
 			</header>
 			<form>
 				<fieldset>
-					<label>Nome</label>
-					<input />
+					<label className="secondary">Nome</label>
+					<input className="secondary" />
 				</fieldset>
-				<fieldset></fieldset>
 			</form>
 		</dialog>
 	);
