@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Jost, Roboto, Roboto_Flex } from "next/font/google";
-import "./globals.css";
 import "./styles/style.scss";
+import "./layouts.scss";
 import Header from "./components/Header/Header";
 
 const jost = Jost({
@@ -42,9 +42,11 @@ export default function RootLayout({
 				${robotoFlex.variable} 
 				`}
 		>
-			<body>
+			<body className="home">
 				<Header />
-				{children}
+				<main className="main">
+					<div className="container">{children}</div>
+				</main>
 			</body>
 		</html>
 	);

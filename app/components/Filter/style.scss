@@ -1,0 +1,60 @@
+@use "../../styles/style" as *;
+
+.filter {
+	width: 23.3%;
+	min-width: 10rem;
+	margin-left: auto;
+	div {
+		position: relative;
+
+		$leftSpacing: 1em;
+		$blockSpacing: 0.43em; /* (6 / 14) -> 14px de fonte base, para chegar a 6px de espacamento*/
+		$borderSize: 1px;
+		$outline: 2px;
+		$outlineOffset: $outline;
+
+		label,
+		input {
+			color: $gray-500;
+		}
+
+		label {
+			position: absolute;
+			bottom: calc($blockSpacing + $borderSize);
+			left: calc($leftSpacing + $borderSize);
+
+			pointer-events: none;
+			transition: transform 0.5s ease-in;
+		}
+
+		label.up {
+			$translateX: $leftSpacing * -1;
+			$translateY: calc(
+				($blockSpacing + $borderSize + $outline + $outlineOffset + 100%) * -1
+			);
+
+			transform: translateX($translateX) translateY($translateY);
+		}
+
+		input {
+			width: 100%;
+			padding-block: $blockSpacing;
+			padding-inline: $leftSpacing 2em;
+			border: $borderSize solid $gray-100;
+			margin-top: 1.5em;
+
+			background-image: url("/search.svg");
+			background-repeat: no-repeat;
+			background-position: right $blockSpacing center;
+			background-size: var(--fs-4);
+
+			border-radius: 0.29em;
+
+			&:focus-visible,
+			&:hover {
+				outline: $outline solid $vinhoOpea;
+				outline-offset: $outlineOffset;
+			}
+		}
+	}
+}
