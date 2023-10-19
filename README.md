@@ -44,6 +44,9 @@ $ff-sec: var(--roboto-flex);
   https://www.w3.org/WAI/tutorials/forms/instructions/#placeholder-text
   https://www.smashingmagazine.com/2018/06/placeholder-attribute/
 
+- A página foi testada com zoom de 200%, fonte padrão de 32px
+  https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html
+
 ## Tarefas
 
 - [x] Fazer configuração do Prettier e ESLint;
@@ -61,6 +64,6 @@ $ff-sec: var(--roboto-flex);
 - [x] Criar componente Adicionar Empresa
   - [x] Criar classe para formato do botão
   - [x] Adicionar ícone à classe utilitária
+- [x] Criar Lista de empresas
 - [ ] Criar componente modal
-- [ ] Criar Lista de empresas
 - [ ] Criar ação de abertura do modal
