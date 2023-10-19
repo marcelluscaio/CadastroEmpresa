@@ -1,7 +1,35 @@
 @use "../../styles/style.scss" as *;
 
 .company-list {
-	.round-corner {
+	li.round-corner {
 		background-color: $white;
+		margin-bottom: $marginBottom-1;
+		article {
+			& > p {
+				margin-bottom: 0.125em;
+			}
+			.company-info {
+				display: flex;
+				align-items: center;
+				gap: calc(var(--fs-1) / 2);
+				flex-wrap: wrap;
+
+				@media (max-width: 45em) {
+					flex-direction: column;
+					align-items: start;
+					gap: calc(var(--fs-1) / 6);
+				}
+
+				span {
+					@media (max-width: 45em) {
+						display: none;
+					}
+				}
+			}
+
+			address {
+				font-style: normal;
+			}
+		}
 	}
 }
