@@ -39,6 +39,11 @@ $ff-sec: var(--roboto-flex);
 - O header acopanha a largura da tela de forma fluida, e as imagens também.
   Caso a equipe de design deseje manter a largura das imagens fixa, basta apagar as larguras em porcentagem.
 
+- Implementei o placeholder do input como uma label para melhor acessibilidade
+  Referências:
+  https://www.w3.org/WAI/tutorials/forms/instructions/#placeholder-text
+  https://www.smashingmagazine.com/2018/06/placeholder-attribute/
+
 ## Tarefas
 
 - [x] Fazer configuração do Prettier e ESLint;

@@ -3,7 +3,7 @@ import Filter from "./components/Filter/Filter";
 const Home = () => {
 	return (
 		<>
-			<Filter />
+			<Filter id="home-filter" />
 		</>
 	);
 };
