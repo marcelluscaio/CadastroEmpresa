@@ -28,13 +28,12 @@
 		}
 
 		label.up {
-			transform: translateX(-$leftSpacing)
-				translateY(
-					calc(
-						($blockSpacing + $borderSize + $outline + $outlineOffset + 100%) *
-							-1
-					)
-				);
+			$translateX: $leftSpacing * -1;
+			$translateY: calc(
+				($blockSpacing + $borderSize + $outline + $outlineOffset + 100%) * -1
+			);
+
+			transform: translateX($translateX) translateY($translateY);
 		}
 
 		input {
