@@ -1,9 +1,12 @@
 @use "./styles/style.scss" as *;
+
 .home {
 	display: grid;
 	grid-template-rows: auto 1fr;
 }
 
 .home main {
+	padding-block: $paddingBlock-2;
+
 	background-color: $white-200;
 }

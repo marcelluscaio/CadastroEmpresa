@@ -30,6 +30,9 @@
 			align-items: center;
 			gap: var(--fs-2);
 			flex-wrap: wrap;
+			figcaption {
+				color: $gray-500;
+			}
 			img {
 				width: calc(var(--fs-4) * 2);
 			}

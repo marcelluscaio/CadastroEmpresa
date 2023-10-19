@@ -1,8 +1,30 @@
+@use "../../styles/style" as *;
+
 .filter {
 	width: fit-content;
 	margin-left: auto;
+	div {
+		position: relative;
+		$leftSpacing: 1em;
+		$blockSpacing: 0.43em; /* (6 / 14) -> 14px de fonte base, para chegar a 6px de espacamento*/
 
-	input {
-		padding-left: 1em;
+		label,
+		input {
+			color: $gray-500;
+		}
+
+		label {
+			position: absolute;
+			bottom: calc($blockSpacing + 1px);
+			left: calc($leftSpacing + 1px);
+
+			pointer-events: none;
+		}
+
+		input {
+			padding-block: $blockSpacing;
+			padding-inline: $leftSpacing 2em;
+			margin-top: 1.5em;
+		}
 	}
 }
