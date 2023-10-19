@@ -6,5 +6,6 @@
 	"singleQuote": false,
 	"jsx-single-quote": false,
 	"singleAttributePerLine": true,
-	"proseWrap": "preserve"
+	"proseWrap": "preserve",
+	"printWidth": 85
 }

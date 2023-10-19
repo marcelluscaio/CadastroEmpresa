@@ -4,6 +4,7 @@
 	width: 23.3%;
 	min-width: 10rem;
 	margin-left: auto;
+	margin-bottom: $marginBottom-2;
 	div {
 		position: relative;
 
@@ -34,6 +35,11 @@
 			);
 
 			transform: translateX($translateX) translateY($translateY);
+			pointer-events: all;
+
+			&:hover {
+				cursor: pointer;
+			}
 		}
 
 		input {
@@ -54,6 +60,7 @@
 			&:hover {
 				outline: $outline solid $vinhoOpea;
 				outline-offset: $outlineOffset;
+				cursor: pointer;
 			}
 		}
 	}
