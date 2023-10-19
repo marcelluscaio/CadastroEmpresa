@@ -1,6 +1,8 @@
 @use "../../styles/style.scss" as *;
 
 .header {
+	position: relative;
+
 	padding-block: $paddingBlock-1;
 
 	background-color: $white;

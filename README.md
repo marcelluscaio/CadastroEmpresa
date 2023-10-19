@@ -9,14 +9,14 @@ Descrição do projeto
 
 ## Observações
 
-O design usa a fonte Roboto. A fonte Roboto Flex é melhor para performance, tendo a mesma aparência que a Roboto. Estruturei o CSS de forma que, caso a equipe de design tivesse qualquer restrição ao uso da Roboto Flex, fosse possível alterar para Roboto com apenas uma linha de código.
+- O design usa a fonte Roboto. A fonte Roboto Flex é melhor para performance, tendo a mesma aparência que a Roboto. Estruturei o CSS de forma que, caso a equipe de design tivesse qualquer restrição ao uso da Roboto Flex, fosse possível alterar para Roboto com apenas uma linha de código.
 
 ```scss
 $ff-sec: var(--roboto);
 $ff-sec: var(--roboto-flex);
 ```
 
-As fontes variam a partir de 1600px de largura. A técnica para mudança de fonte permite alterar as fontes em apenas um lugar e cascatear para todo o projeto.
+- As fontes variam a partir de 1600px de largura. A técnica para mudança de fonte permite alterar as fontes em apenas um lugar e cascatear para todo o projeto.
 
 ```scss
 :root {
@@ -36,8 +36,8 @@ As fontes variam a partir de 1600px de largura. A técnica para mudança de font
 }
 ```
 
-O header acopanha a largura da tela de forma fluida, e as imagens também.
-Caso a equipe de design deseje manter a largura das imagens fixa, basta apagar as larguras em porcentagem.
+- O header acopanha a largura da tela de forma fluida, e as imagens também.
+  Caso a equipe de design deseje manter a largura das imagens fixa, basta apagar as larguras em porcentagem.
 
 ## Tarefas
 

@@ -1,0 +1,9 @@
+@use "./styles/style.scss" as *;
+.home {
+	display: grid;
+	grid-template-rows: auto 1fr;
+}
+
+.home main {
+	background-color: $white-200;
+}
