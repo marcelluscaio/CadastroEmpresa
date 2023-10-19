@@ -1,0 +1,22 @@
+@use "typography" as *;
+
+.round-corner {
+	$size: pxToRem(40);
+	$padding-block: calc(var(--fs-4) / 2);
+	$padding-left: calc(($padding-block * 2) + $size);
+	/* This calc is to guaranteee the background will have a padding*/
+	min-height: calc($size + ($padding-block * 2));
+	width: 100%;
+	padding-block: calc(var(--fs-4) / 2);
+	padding-left: $padding-left;
+	border: none;
+
+	background-image: url("../../public/icon.svg");
+	background-repeat: no-repeat;
+	background-size: $size $size;
+	background-position: left $padding-block center;
+
+	$radiusBig: calc(var(--fs-4) * 2);
+	$radiusSmall: calc(var(--fs-4) / 4);
+	border-radius: $radiusBig $radiusSmall $radiusSmall $radiusBig;
+}
