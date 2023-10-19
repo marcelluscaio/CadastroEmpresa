@@ -58,7 +58,9 @@ $ff-sec: var(--roboto-flex);
   - [x] Set label animation
   - [x] Set focus and hover outline for accessibility
   - [x] Add icon
-- [ ] Criar componente Adicionar Empresa
+- [x] Criar componente Adicionar Empresa
+  - [x] Criar classe para formato do botão
+  - [x] Adicionar ícone à classe utilitária
 - [ ] Criar componente modal
 - [ ] Criar Lista de empresas
 - [ ] Criar ação de abertura do modal
