@@ -7,4 +7,11 @@
 	background-color: transparent;
 
 	color: $gray-300;
+
+	&:hover,
+	&:focus-visible {
+		outline: 2px solid $vinhoOpea;
+		outline-offset: 2px;
+		cursor: pointer;
+	}
 }
