@@ -1,6 +1,7 @@
 "use client";
 
 import { MouseEvent, useRef } from "react";
+import Form from "../Form/Form";
 import "./style.scss";
 
 type Props = {
@@ -35,17 +36,7 @@ const Modal = ({ isOpen, toggleModal }: Props) => {
 				<p className="primary--bigLine">Cadastrar Empresa</p>
 				<button onClick={handleToggle}></button>
 			</header>
-			<form>
-				<fieldset>
-					<label className="secondary">Nome</label>
-					<input className="secondary" />
-				</fieldset>
-				<fieldset>
-					<button className="delete"></button>
-					<button className="button--light primary--3--bold">Cancelar</button>
-					<button className="button primary--3--bold">Cadastrar</button>
-				</fieldset>
-			</form>
+			<Form />
 		</dialog>
 	);
 };
