@@ -1,0 +1,10 @@
+@use "../../styles/style.scss" as *;
+
+.round-corner.add-company {
+	border: 0.1em solid $gray-100;
+
+	background-image: url("../../../public/iconLight.svg");
+	background-color: transparent;
+
+	color: $gray-300;
+}

@@ -1,13 +1,14 @@
 @use "typography" as *;
 
 $paddingBlock-1: var(--fs-1);
-/* Fiz 11px em REM para completar os 21px necessarios como margin-top do input*/
 $paddingBlock-2: pxToRem(11);
+/* I used 11px in REM to complete the 21px needed for the input's margin-top*/
 
 $marginBottom-1: calc(var(--fs-1) / 2);
 $marginBottom-2: var(--fs-1);
 
 .container {
 	width: 95%;
+	max-width: 100rem;
 	margin-inline: auto;
 }
