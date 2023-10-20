@@ -4,17 +4,37 @@ import { useState } from "react";
 type Props = {
 	closeModal: Function;
 	setData: Function;
+	id: string;
+	name: string;
+	cnpj: string;
+	email: string;
+	setId: Function;
+	setName: Function;
+	setCnpj: Function;
+	setEmail: Function;
 };
 
-const Form = ({ closeModal, setData }: Props) => {
-	const [name, setName] = useState("");
-	const [cnpj, setCnpj] = useState("");
-	const [email, setEmail] = useState("");
-
+const Form = ({
+	closeModal,
+	setData,
+	id,
+	name,
+	cnpj,
+	email,
+	setId,
+	setName,
+	setCnpj,
+	setEmail,
+}: Props) => {
 	function handleCancel(e: any) {
 		e.preventDefault();
 		cleanFields();
 		closeModal();
+	}
+
+	function handleDelete(e: any, id: string) {
+		deleteData(id);
+		handleCancel(e);
 	}
 
 	function cleanFields() {
@@ -47,17 +67,20 @@ const Form = ({ closeModal, setData }: Props) => {
 			cnpj: cnpj,
 		});
 
-		const options = {
-			method: "POST",
-			headers: myHeaders,
-			body: data,
-			redirect: "follow",
-		};
-
 		fetch("https://outros.opea-uat.solutions/prova/front/api/clients", {
 			method: "POST",
 			headers: myHeaders,
 			body: data,
+			redirect: "follow",
+		})
+			.then((response) => response.text())
+			.then((result) => console.log(result))
+			.then(() => updateData());
+	}
+
+	function deleteData(id: string) {
+		fetch(`https://outros.opea-uat.solutions/prova/front/api/clients/${id}`, {
+			method: "DELETE",
 			redirect: "follow",
 		})
 			.then((response) => response.text())
@@ -118,7 +141,8 @@ const Form = ({ closeModal, setData }: Props) => {
 			<fieldset className="buttons">
 				<button
 					className="delete"
-					onClick={(e) => handleCancel(e)}
+					aria-label="Deletar empresa"
+					onClick={(e) => handleDelete(e, id)}
 				></button>
 				<button
 					className="button--light primary--3--bold"

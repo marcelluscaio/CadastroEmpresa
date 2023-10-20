@@ -4,7 +4,13 @@
 	li.round-corner {
 		background-color: $white;
 		margin-bottom: $marginBottom-1;
-		article {
+
+		@include focusHover($vinhoOpea, 2px);
+		button {
+			width: 100%;
+
+			text-align: left;
+
 			& > p {
 				margin-bottom: 0.125em;
 			}

@@ -19,6 +19,11 @@ const Home = () => {
 
 	const [data, setData] = useState<Data[]>([]);
 
+	const [formId, setFormId] = useState("");
+	const [formName, setFormName] = useState("");
+	const [formCnpj, setFormCnpj] = useState("");
+	const [formEmail, setFormEmail] = useState("");
+
 	useEffect(() => {
 		fetch("https://outros.opea-uat.solutions/prova/front/api/clients")
 			.then((result) => result.json())
@@ -32,11 +37,30 @@ const Home = () => {
 				setData={setData}
 			/>
 			<AddCompany toggleModal={setModalIsOpen} />
-			<List data={data} />
+			<List
+				data={data}
+				toggleModal={setModalIsOpen}
+				formId={formId}
+				formName={formName}
+				formCnpj={formCnpj}
+				formEmail={formEmail}
+				setFormId={setFormId}
+				setFormName={setFormName}
+				setFormCnpj={setFormCnpj}
+				setFormEmail={setFormEmail}
+			/>
 			<Modal
 				isOpen={modalIsOpen}
 				toggleModal={setModalIsOpen}
 				setData={setData}
+				formId={formId}
+				formName={formName}
+				formCnpj={formCnpj}
+				formEmail={formEmail}
+				setFormId={setFormId}
+				setFormName={setFormName}
+				setFormCnpj={setFormCnpj}
+				setFormEmail={setFormEmail}
 			/>
 		</>
 	);
