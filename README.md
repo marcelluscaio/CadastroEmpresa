@@ -69,7 +69,7 @@ $ff-sec: var(--roboto-flex);
   - [x] Criar classe para formato do botão
   - [x] Adicionar ícone à classe utilitária
 - [x] Criar Lista de empresas
-- [ ] Criar componente modal
+- [x] Criar componente modal
   - [x] Fazer Mecanismo de abertura do modal
   - [x] Fazer Modal fechar com esc e clicando fora dele
   - [x] Layout do modal
@@ -78,3 +78,8 @@ $ff-sec: var(--roboto-flex);
   - [x] Aria label no botao de fechar
   - [x] Cursor pointer nas labels
   - [x] Adicionar padding aos inputs
+- [x] Itens da lista trazidos automaticamente pela API
+- [x] Inclusão, Edição, e exclusão de empresas
+- [ ] Ação de filtro
+- [ ] Exclusao de empresa
+- [ ] Edicao de empresas
