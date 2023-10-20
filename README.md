@@ -75,6 +75,6 @@ $ff-sec: var(--roboto-flex);
   - [x] Layout do modal
   - [x] Garantir que modal continue funcional com zoom e fonte base de 32px
   - [x] Outline do modal seguindo padrão da página
-  - [ ] Aria label no botao de fechar
+  - [x] Aria label no botao de fechar
   - [x] Cursor pointer nas labels
   - [x] Adicionar padding aos inputs

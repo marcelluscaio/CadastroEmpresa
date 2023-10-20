@@ -34,7 +34,10 @@ const Modal = ({ isOpen, toggleModal }: Props) => {
 		>
 			<header>
 				<p className="primary--bigLine">Cadastrar Empresa</p>
-				<button onClick={handleToggle}></button>
+				<button
+					onClick={handleToggle}
+					aria-label="Fechar modal"
+				></button>
 			</header>
 			<Form />
 		</dialog>
