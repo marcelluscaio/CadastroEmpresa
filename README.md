@@ -78,6 +78,6 @@ $ff-sec: var(--roboto-flex);
   - [x] Aria label no botao de fechar
   - [x] Cursor pointer nas labels
   - [x] Adicionar padding aos inputs
-- [ ] Itens da lista trazidos automaticamente pela API
+- [x] Itens da lista trazidos automaticamente pela API
 - [ ] Inclusão, Edição, e exclusão de empresas
 - [ ] Ação de filtro

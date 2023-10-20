@@ -39,7 +39,7 @@ const Modal = ({ isOpen, toggleModal }: Props) => {
 					aria-label="Fechar modal"
 				></button>
 			</header>
-			<Form />
+			<Form closeModal={handleToggle} />
 		</dialog>
 	);
 };
