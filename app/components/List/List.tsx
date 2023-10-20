@@ -1,9 +1,9 @@
 import "./styles.scss";
 
-const List = ({ data }) => {
+const List = ({ data }: any) => {
 	return (
 		<ul className="company-list">
-			{data.map((item) => (
+			{data.map((item: any) => (
 				<li
 					className="round-corner"
 					key={item.id}

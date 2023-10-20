@@ -11,7 +11,7 @@ const Form = ({ closeModal, setData }: Props) => {
 	const [cnpj, setCnpj] = useState("");
 	const [email, setEmail] = useState("");
 
-	function handleCancel(e: MouseEvent) {
+	function handleCancel(e: any) {
 		e.preventDefault();
 		cleanFields();
 		closeModal();
@@ -23,7 +23,7 @@ const Form = ({ closeModal, setData }: Props) => {
 		setEmail("");
 	}
 
-	function submitData(e: MouseEvent) {
+	function submitData(e: any) {
 		e.preventDefault();
 		if (isComplete()) {
 			postData();
@@ -54,7 +54,12 @@ const Form = ({ closeModal, setData }: Props) => {
 			redirect: "follow",
 		};
 
-		fetch("https://outros.opea-uat.solutions/prova/front/api/clients", options)
+		fetch("https://outros.opea-uat.solutions/prova/front/api/clients", {
+			method: "POST",
+			headers: myHeaders,
+			body: data,
+			redirect: "follow",
+		})
 			.then((response) => response.text())
 			.then((result) => console.log(result))
 			.then(() => updateData());
