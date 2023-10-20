@@ -51,6 +51,12 @@ $ff-sec: var(--roboto-flex);
 - A página foi testada com zoom de 200%, fonte padrão de 32px
   https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html
 
+## Melhorias futuras
+
+- [ ] Aplicar debounce no filtro para reduzir quantidade de requisições
+- [ ] Fazer requisição inicial no servidor para melhorar o tempo de carregamento inicial
+- [ ] Submissão dos dados com enter
+
 ## Tarefas
 
 - [x] Fazer configuração do Prettier e ESLint;
@@ -80,6 +86,6 @@ $ff-sec: var(--roboto-flex);
   - [x] Adicionar padding aos inputs
 - [x] Itens da lista trazidos automaticamente pela API
 - [x] Inclusão, Edição, e exclusão de empresas
-- [ ] Ação de filtro
-- [ ] Exclusao de empresa
-- [ ] Edicao de empresas
+- [x] Ação de filtro
+- [x] Exclusao de empresa
+- [x] Edicao de empresas

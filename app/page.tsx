@@ -36,7 +36,13 @@ const Home = () => {
 				id="home-filter"
 				setData={setData}
 			/>
-			<AddCompany toggleModal={setModalIsOpen} />
+			<AddCompany
+				toggleModal={setModalIsOpen}
+				setFormId={setFormId}
+				setFormName={setFormName}
+				setFormCnpj={setFormCnpj}
+				setFormEmail={setFormEmail}
+			/>
 			<List
 				data={data}
 				toggleModal={setModalIsOpen}
