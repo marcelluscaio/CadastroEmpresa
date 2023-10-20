@@ -1,5 +1,4 @@
 import "./style.scss";
-import { useState } from "react";
 
 type Props = {
 	closeModal: Function;
@@ -26,10 +25,19 @@ const Form = ({
 	setCnpj,
 	setEmail,
 }: Props) => {
-	function handleCancel(e: any) {
+	function handleConfirmUpdate(e: any, id: string) {
 		e.preventDefault();
+		id === "" ? submitData() : updateData(id);
+	}
+
+	function cleanAndClose() {
 		cleanFields();
 		closeModal();
+	}
+
+	function handleCancel(e: any) {
+		e.preventDefault();
+		cleanAndClose();
 	}
 
 	function handleDelete(e: any, id: string) {
@@ -38,17 +46,16 @@ const Form = ({
 	}
 
 	function cleanFields() {
+		setId("");
 		setName("");
 		setCnpj("");
 		setEmail("");
 	}
 
-	function submitData(e: any) {
-		e.preventDefault();
+	function submitData() {
 		if (isComplete()) {
 			postData();
-			cleanFields();
-			closeModal();
+			cleanAndClose();
 		}
 	}
 
@@ -75,7 +82,7 @@ const Form = ({
 		})
 			.then((response) => response.text())
 			.then((result) => console.log(result))
-			.then(() => updateData());
+			.then(() => refresh());
 	}
 
 	function deleteData(id: string) {
@@ -85,10 +92,32 @@ const Form = ({
 		})
 			.then((response) => response.text())
 			.then((result) => console.log(result))
-			.then(() => updateData());
+			.then(() => refresh());
 	}
 
-	function updateData() {
+	function updateData(id: string) {
+		const myHeaders = new Headers();
+		myHeaders.append("Content-Type", "application/json");
+
+		const data = JSON.stringify({
+			name: name,
+			email: email,
+			cnpj: cnpj,
+		});
+
+		fetch(`https://outros.opea-uat.solutions/prova/front/api/clients/${id}`, {
+			method: "PUT",
+			headers: myHeaders,
+			body: data,
+			redirect: "follow",
+		})
+			.then((response) => response.text())
+			.then((result) => console.log(result))
+			.then(() => refresh())
+			.then(() => cleanAndClose());
+	}
+
+	function refresh() {
 		fetch("https://outros.opea-uat.solutions/prova/front/api/clients")
 			.then((result) => result.json())
 			.then((result) => setData(result));
@@ -140,21 +169,26 @@ const Form = ({
 			</fieldset>
 			<fieldset className="buttons">
 				<button
+					type="button"
+					disabled={id === ""}
+					aria-disabled={id === ""}
 					className="delete"
 					aria-label="Deletar empresa"
 					onClick={(e) => handleDelete(e, id)}
 				></button>
 				<button
+					type="button"
 					className="button--light primary--3--bold"
 					onClick={(e) => handleCancel(e)}
 				>
 					Cancelar
 				</button>
 				<button
+					type="submit"
 					className="button primary--3--bold"
-					onClick={(e) => submitData(e)}
+					onClick={(e) => handleConfirmUpdate(e, id)}
 				>
-					Cadastrar
+					{id === "" ? "Cadastrar" : "Atualizar"}
 				</button>
 			</fieldset>
 		</form>
