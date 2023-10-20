@@ -18,13 +18,27 @@
 
 		input {
 			width: 100%;
+			padding-block: 0.5em;
+			padding-inline: 1em 0.5em;
 			border: 0.1em solid $gray-100;
 			border-radius: 0.34em;
+
+			&:focus-visible,
+			&:hover {
+				outline: 2px solid $vinhoOpea;
+				outline-offset: 2px;
+			}
 		}
 
 		&.buttons {
 			display: flex;
 			gap: 0.5rem;
+
+			button:focus-visible,
+			button:hover {
+				outline: 2px solid $vinhoOpea;
+				outline-offset: 2px;
+			}
 
 			.delete {
 				min-width: pxToRem(30);

@@ -16,6 +16,8 @@
 	header {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
+		gap: 0.5rem;
 
 		$padding: var(--fs-4);
 		padding-block: calc($padding / 2);
@@ -35,6 +37,12 @@
 			background-repeat: no-repeat;
 			background-position: center;
 			background-size: 100% 100%;
+
+			&:focus-visible,
+			&:hover {
+				outline: 2px solid $vinhoOpea;
+				outline-offset: 2px;
+			}
 		}
 	}
 }
