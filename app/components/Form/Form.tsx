@@ -184,6 +184,8 @@ const Form = ({
 					Cancelar
 				</button>
 				<button
+					disabled={!isComplete()}
+					aria-disabled={!isComplete()}
 					type="submit"
 					className="button primary--3--bold"
 					onClick={(e) => handleConfirmUpdate(e, id)}
