@@ -10,8 +10,8 @@ O conteúdo do modal varia de acordo com o contexto em que é acionado.
 
 ## Como rodar este projeto
 
-- É necessário ter a versão 18 ou maioe do Node
-- Digite node i no seu terminal na raiz do projeto
+- É necessário ter a versão 18 ou maior do Node
+- Digite npm i no seu terminal na raiz do projeto
 - Execute npm run dev e abra o localhost na porta indicada no terminal
 
 ## Observações
@@ -97,4 +97,4 @@ $ff-sec: var(--roboto-flex);
 
 - [ ] Aplicar debounce no filtro para reduzir quantidade de requisições
 - [ ] Fazer requisição inicial no servidor para melhorar o tempo de carregamento inicial
-- [ ] Submissão dos dados com enter
+- [ ] Submissão dos dados com enter mesmo sem foco no input
