@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./style.scss";
+import { setTimeout } from "timers/promises";
 
 type Props = {
 	id: string;
+	setData: Function;
 };
 
-const Filter = ({ id }: Props) => {
+const Filter = ({ id, setData }: Props) => {
 	const [inputValue, setInputValue] = useState("");
 	const [isEmpty, setIsEmpty] = useState(true);
 
@@ -13,10 +15,19 @@ const Filter = ({ id }: Props) => {
 		const newValue = input.value;
 		isContentEmpty(newValue);
 		setInputValue(newValue);
+		searchCompany(newValue);
 	}
 
 	function isContentEmpty(content: string) {
 		content.trim() === "" ? setIsEmpty(true) : setIsEmpty(false);
+	}
+
+	function searchCompany(content: string) {
+		const query = content.replace(" ", "%20");
+
+		fetch(`https://outros.opea-uat.solutions/prova/front/api/clients?text=${query}`)
+			.then((result) => result.json())
+			.then((result) => setData(result));
 	}
 
 	return (
