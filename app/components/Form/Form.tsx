@@ -3,9 +3,10 @@ import { useState } from "react";
 
 type Props = {
 	closeModal: Function;
+	setData: Function;
 };
 
-const Form = ({ closeModal }: Props) => {
+const Form = ({ closeModal, setData }: Props) => {
 	const [name, setName] = useState("");
 	const [cnpj, setCnpj] = useState("");
 	const [email, setEmail] = useState("");
@@ -24,7 +25,11 @@ const Form = ({ closeModal }: Props) => {
 
 	function submitData(e: MouseEvent) {
 		e.preventDefault();
-		isComplete() && postData();
+		if (isComplete()) {
+			postData();
+			cleanFields();
+			closeModal();
+		}
 	}
 
 	function isComplete() {
@@ -51,7 +56,14 @@ const Form = ({ closeModal }: Props) => {
 
 		fetch("https://outros.opea-uat.solutions/prova/front/api/clients", options)
 			.then((response) => response.text())
-			.then((result) => console.log(result));
+			.then((result) => console.log(result))
+			.then(() => updateData());
+	}
+
+	function updateData() {
+		fetch("https://outros.opea-uat.solutions/prova/front/api/clients")
+			.then((result) => result.json())
+			.then((result) => setData(result));
 	}
 
 	return (

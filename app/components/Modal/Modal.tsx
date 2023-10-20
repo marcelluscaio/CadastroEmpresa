@@ -7,9 +7,10 @@ import "./style.scss";
 type Props = {
 	isOpen: boolean;
 	toggleModal: Function;
+	setData: Function;
 };
 
-const Modal = ({ isOpen, toggleModal }: Props) => {
+const Modal = ({ isOpen, toggleModal, setData }: Props) => {
 	const ref = useRef<HTMLDialogElement>(null);
 
 	isOpen ? ref.current?.showModal() : ref.current?.close();
@@ -39,7 +40,10 @@ const Modal = ({ isOpen, toggleModal }: Props) => {
 					aria-label="Fechar modal"
 				></button>
 			</header>
-			<Form closeModal={handleToggle} />
+			<Form
+				closeModal={handleToggle}
+				setData={setData}
+			/>
 		</dialog>
 	);
 };

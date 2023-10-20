@@ -79,5 +79,7 @@ $ff-sec: var(--roboto-flex);
   - [x] Cursor pointer nas labels
   - [x] Adicionar padding aos inputs
 - [x] Itens da lista trazidos automaticamente pela API
-- [ ] Inclusão, Edição, e exclusão de empresas
+- [x] Inclusão, Edição, e exclusão de empresas
 - [ ] Ação de filtro
+- [ ] Exclusao de empresa
+- [ ] Edicao de empresas

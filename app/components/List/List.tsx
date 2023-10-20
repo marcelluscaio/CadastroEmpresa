@@ -1,22 +1,6 @@
 import "./styles.scss";
-import { useState, useEffect } from "react";
 
-type Data = {
-	id: string;
-	name: string;
-	email: string;
-	cnpj: string;
-};
-
-const List = () => {
-	const [data, setData] = useState<Data[]>([]);
-
-	useEffect(() => {
-		fetch("https://outros.opea-uat.solutions/prova/front/api/clients")
-			.then((result) => result.json())
-			.then((result) => setData(result));
-	}, []);
-
+const List = ({ data }) => {
 	return (
 		<ul className="company-list">
 			{data.map((item) => (
