@@ -54,7 +54,9 @@ const Modal = ({
 			onClick={(e) => checkClickOutside(e)}
 		>
 			<header>
-				<p className="primary--bigLine">Cadastrar Empresa</p>
+				<p className="primary--bigLine">
+					{formId === "" ? "Cadastrar Empresa" : "Atualizar Empresa"}
+				</p>
 				<button
 					onClick={handleToggle}
 					aria-label="Fechar modal"
