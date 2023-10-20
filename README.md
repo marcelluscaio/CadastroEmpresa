@@ -44,6 +44,10 @@ $ff-sec: var(--roboto-flex);
   https://www.w3.org/WAI/tutorials/forms/instructions/#placeholder-text
   https://www.smashingmagazine.com/2018/06/placeholder-attribute/
 
+- Modal é aberto com a função nativa `showModal()`. Para isso utilizei o hook useRef, garantindo que não haja interação com o restante da página. Além disso o modal pode ser fechado com esc e com o clique fora da caixa de diálogo
+  Referências:
+  https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog
+
 - A página foi testada com zoom de 200%, fonte padrão de 32px
   https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html
 
@@ -66,4 +70,11 @@ $ff-sec: var(--roboto-flex);
   - [x] Adicionar ícone à classe utilitária
 - [x] Criar Lista de empresas
 - [ ] Criar componente modal
-- [ ] Criar ação de abertura do modal
+  - [x] Fazer Mecanismo de abertura do modal
+  - [x] Fazer Modal fechar com esc e clicando fora dele
+  - [x] Layout do modal
+  - [x] Garantir que modal continue funcional com zoom e fonte base de 32px
+  - [x] Outline do modal seguindo padrão da página
+  - [x] Aria label no botao de fechar
+  - [x] Cursor pointer nas labels
+  - [x] Adicionar padding aos inputs

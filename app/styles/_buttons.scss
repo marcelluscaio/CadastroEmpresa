@@ -1,4 +1,5 @@
 @use "typography" as *;
+@use "colors" as *;
 
 .round-corner {
 	$size: pxToRem(40);
@@ -9,7 +10,6 @@
 	width: 100%;
 	padding-block: calc(var(--fs-4) / 2);
 	padding-left: $padding-left;
-	border: none;
 
 	background-image: url("../../public/icon.svg");
 	background-repeat: no-repeat;
@@ -19,4 +19,23 @@
 	$radiusBig: calc(var(--fs-4) * 2);
 	$radiusSmall: calc(var(--fs-4) / 4);
 	border-radius: $radiusBig $radiusSmall $radiusSmall $radiusBig;
+}
+
+.button {
+	padding: 0.58em 0.86em;
+	border-radius: 0.29em;
+
+	background-color: $vinhoOpea;
+
+	color: $white;
+	letter-spacing: 1px;
+
+	&--light {
+		@extend .button;
+		border: 0.1em solid $gray-200;
+
+		background-color: $white;
+
+		color: $gray-400;
+	}
 }

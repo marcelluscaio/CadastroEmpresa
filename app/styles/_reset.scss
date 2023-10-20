@@ -60,3 +60,15 @@ a {
 ul {
 	list-style: none;
 }
+
+button {
+	border: none;
+	background-color: transparent;
+}
+
+button,
+input,
+select,
+label {
+	cursor: pointer;
+}
