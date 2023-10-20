@@ -32,6 +32,10 @@
 
 			button {
 				@include focusHover($vinhoOpea, 2px);
+				&:disabled {
+					opacity: 0.4;
+					outline: none;
+				}
 			}
 
 			.delete {
@@ -45,6 +49,7 @@
 
 				&:disabled {
 					opacity: 0.4;
+					outline: none;
 				}
 			}
 		}
