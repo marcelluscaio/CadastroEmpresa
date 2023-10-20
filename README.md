@@ -1,11 +1,18 @@
 # Cadastro de Empresas
 
-Descrição do projeto
+O cadastro de empresas da Opea permite que a pessoa usuária leia, filtre, crie, atualize e delete empresas de um banco de dados.
+
+Para criar empresas, deve-se clicar no botão "Adicionar Empresas".
+Para filtrar, deve-se usar o campo de "Buscar Empresas".
+Para atualizar ou deletar, deve-se clicar na empresa presente na lista.
+Todas as ações são intuitivas e têm ações de hover e foco, para auxiliar a pessoa usuária.
+O conteúdo do modal varia de acordo com o contexto em que é acionado.
 
 ## Como rodar este projeto
 
-- Versão do Node
-- Certifique-se que sua versão do node é a 18 ou maior
+- É necessário ter a versão 18 ou maioe do Node
+- Digite node i no seu terminal na raiz do projeto
+- Execute npm run dev e abra o localhost na porta indicada no terminal
 
 ## Observações
 
@@ -37,7 +44,7 @@ $ff-sec: var(--roboto-flex);
 ```
 
 - O header acopanha a largura da tela de forma fluida, e as imagens também.
-  Caso a equipe de design deseje manter a largura das imagens fixa, basta apagar as larguras em porcentagem.
+  Caso a equipe de design deseje manter a largura das imagens fixa, bastaria apagar as larguras em porcentagem.
 
 - Implementei o placeholder do input como uma label para melhor acessibilidade
   Referências:
@@ -50,6 +57,8 @@ $ff-sec: var(--roboto-flex);
 
 - A página foi testada com zoom de 200%, fonte padrão de 32px
   https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html
+
+- A página foi testada com navegação apenas pelo teclado, permitindo que usuários que não conseguem usar o mouse tenham acesso a todas as funcionalidades
 
 ## Tarefas
 
@@ -80,6 +89,12 @@ $ff-sec: var(--roboto-flex);
   - [x] Adicionar padding aos inputs
 - [x] Itens da lista trazidos automaticamente pela API
 - [x] Inclusão, Edição, e exclusão de empresas
-- [ ] Ação de filtro
-- [ ] Exclusao de empresa
-- [ ] Edicao de empresas
+- [x] Ação de filtro
+- [x] Exclusão de empresa
+- [x] Edição de empresas
+
+## Melhorias futuras
+
+- [ ] Aplicar debounce no filtro para reduzir quantidade de requisições
+- [ ] Fazer requisição inicial no servidor para melhorar o tempo de carregamento inicial
+- [ ] Submissão dos dados com enter

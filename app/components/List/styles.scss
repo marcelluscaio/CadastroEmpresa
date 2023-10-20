@@ -6,10 +6,15 @@
 		margin-bottom: $marginBottom-1;
 
 		@include focusHover($vinhoOpea, 2px);
+		&:focus-within {
+			outline: 2px solid $vinhoOpea;
+			outline-offset: 2px;
+		}
 		button {
 			width: 100%;
 
 			text-align: left;
+			outline: none;
 
 			& > p {
 				margin-bottom: 0.125em;
