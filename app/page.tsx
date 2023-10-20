@@ -27,7 +27,10 @@ const Home = () => {
 
 	return (
 		<>
-			<Filter id="home-filter" />
+			<Filter
+				id="home-filter"
+				setData={setData}
+			/>
 			<AddCompany toggleModal={setModalIsOpen} />
 			<List data={data} />
 			<Modal
