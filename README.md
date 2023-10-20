@@ -45,6 +45,8 @@ $ff-sec: var(--roboto-flex);
   https://www.smashingmagazine.com/2018/06/placeholder-attribute/
 
 - Modal é aberto com a função nativa `showModal()`. Para isso utilizei o hook useRef, garantindo que não haja interação com o restante da página. Além disso o modal pode ser fechado com esc e com o clique fora da caixa de diálogo
+  Referências:
+  https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog
 
 - A página foi testada com zoom de 200%, fonte padrão de 32px
   https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html

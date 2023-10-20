@@ -1,0 +1,7 @@
+@mixin focusHover($color, $size, $offset: $size) {
+	&:hover,
+	&:focus-visible {
+		outline: $size solid $color;
+		outline-offset: $offset;
+	}
+}
