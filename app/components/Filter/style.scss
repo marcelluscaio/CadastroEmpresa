@@ -56,12 +56,7 @@
 
 			border-radius: 0.29em;
 
-			&:focus-visible,
-			&:hover {
-				outline: $outline solid $vinhoOpea;
-				outline-offset: $outlineOffset;
-				cursor: pointer;
-			}
+			@include focusHover($vinhoOpea, $outline, $outlineOffset);
 		}
 	}
 }

@@ -1,0 +1,44 @@
+@use "../../styles/style.scss" as *;
+
+.modal {
+	position: fixed;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -30%);
+
+	min-width: 25%;
+	border: none;
+
+	background-color: $white;
+
+	border-radius: 0.25rem;
+
+	header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 0.5rem;
+
+		$padding: var(--fs-4);
+		padding-block: calc($padding / 2);
+		padding-inline: $padding calc($padding * 3 / 4);
+		$blackTranparent: rgba(0, 0, 0, 0.3);
+		border-bottom: 1px solid $blackTranparent;
+
+		p {
+			color: $blackTranparent;
+		}
+
+		button {
+			width: var(--fs-4);
+			aspect-ratio: 1;
+
+			background-image: url("../../../public/close.svg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 100% 100%;
+
+			@include focusHover($vinhoOpea, 2px);
+		}
+	}
+}

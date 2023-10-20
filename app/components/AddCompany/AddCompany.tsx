@@ -1,6 +1,10 @@
 import "./style.scss";
 
-const AddCompany = () => {
+type Props = {
+	toggleModal: Function;
+};
+
+const AddCompany = ({ toggleModal }: Props) => {
 	return (
 		<>
 			<button
@@ -8,6 +12,7 @@ const AddCompany = () => {
 					round-corner 
 					primary--3--bold 
 					add-company"
+				onClick={() => toggleModal((current: boolean) => !current)}
 			>
 				Adicionar Empresa
 			</button>

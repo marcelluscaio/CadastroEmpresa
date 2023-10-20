@@ -5,14 +5,7 @@
 	border: 0.1em solid $gray-100;
 
 	background-image: url("../../../public/iconLight.svg");
-	background-color: transparent;
 
 	color: $gray-300;
-
-	&:hover,
-	&:focus-visible {
-		outline: 2px solid $vinhoOpea;
-		outline-offset: 2px;
-		cursor: pointer;
-	}
+	@include focusHover($vinhoOpea, 2px);
 }
