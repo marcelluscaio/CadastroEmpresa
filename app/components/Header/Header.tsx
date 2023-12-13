@@ -11,7 +11,7 @@ const Header = () => {
 						src="/Logo.png"
 						width={500}
 						height={500}
-						alt="Logo da Opea"
+						alt="Logo"
 					/>
 				</Link>
 				<figure>

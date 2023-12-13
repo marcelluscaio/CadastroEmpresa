@@ -14,6 +14,8 @@ type Data = {
 	cnpj: string;
 };
 
+const url = process.env.NEXT_PUBLIC_URL;
+
 const Home = () => {
 	const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 
@@ -25,9 +27,10 @@ const Home = () => {
 	const [formEmail, setFormEmail] = useState("");
 
 	useEffect(() => {
-		fetch("https://outros.opea-uat.solutions/prova/front/api/clients")
-			.then((result) => result.json())
-			.then((result) => setData(result));
+		url &&
+			fetch(url)
+				.then((result) => result.json())
+				.then((result) => setData(result));
 	}, []);
 
 	return (

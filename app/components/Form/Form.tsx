@@ -13,6 +13,10 @@ type Props = {
 	setEmail: Function;
 };
 
+const url = process.env.NEXT_PUBLIC_URL
+	? process.env.NEXT_PUBLIC_URL
+	: "Include .env";
+
 const Form = ({
 	closeModal,
 	setData,
@@ -74,7 +78,7 @@ const Form = ({
 			cnpj: cnpj,
 		});
 
-		fetch("https://outros.opea-uat.solutions/prova/front/api/clients", {
+		fetch(url, {
 			method: "POST",
 			headers: myHeaders,
 			body: data,
@@ -86,7 +90,7 @@ const Form = ({
 	}
 
 	function deleteData(id: string) {
-		fetch(`https://outros.opea-uat.solutions/prova/front/api/clients/${id}`, {
+		fetch(`${url}/${id}`, {
 			method: "DELETE",
 			redirect: "follow",
 		})
@@ -105,7 +109,7 @@ const Form = ({
 			cnpj: cnpj,
 		});
 
-		fetch(`https://outros.opea-uat.solutions/prova/front/api/clients/${id}`, {
+		fetch(`${url}/${id}`, {
 			method: "PUT",
 			headers: myHeaders,
 			body: data,
@@ -118,7 +122,7 @@ const Form = ({
 	}
 
 	function refresh() {
-		fetch("https://outros.opea-uat.solutions/prova/front/api/clients")
+		fetch(url)
 			.then((result) => result.json())
 			.then((result) => setData(result));
 	}

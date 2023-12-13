@@ -7,6 +7,8 @@ type Props = {
 	setData: Function;
 };
 
+const url = process.env.NEXT_PUBLIC_URL;
+
 const Filter = ({ id, setData }: Props) => {
 	const [inputValue, setInputValue] = useState("");
 	const [isEmpty, setIsEmpty] = useState(true);
@@ -25,7 +27,7 @@ const Filter = ({ id, setData }: Props) => {
 	function searchCompany(content: string) {
 		const query = content.replace(" ", "%20");
 
-		fetch(`https://outros.opea-uat.solutions/prova/front/api/clients?text=${query}`)
+		fetch(`${url}?text=${query}`)
 			.then((result) => result.json())
 			.then((result) => setData(result));
 	}
