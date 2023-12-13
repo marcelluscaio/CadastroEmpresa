@@ -92,6 +92,7 @@ $ff-sec: var(--roboto-flex);
 - [x] Ação de filtro
 - [x] Exclusão de empresa
 - [x] Edição de empresas
+- [ ] Usar .env
 
 ## Melhorias futuras
 
