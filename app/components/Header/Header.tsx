@@ -8,9 +8,9 @@ const Header = () => {
 			<div className="container">
 				<Link href="/">
 					<Image
-						src="/logo_opea.svg"
-						width={107}
-						height={32}
+						src="/Logo.png"
+						width={500}
+						height={500}
 						alt="Logo da Opea"
 					/>
 				</Link>

@@ -1,6 +1,6 @@
 # Cadastro de Empresas
 
-O cadastro de empresas da Opea permite que a pessoa usuária leia, filtre, crie, atualize e delete empresas de um banco de dados.
+O cadastro de empresas permite que a pessoa usuária leia, filtre, crie, atualize e delete empresas de um banco de dados.
 
 Para criar empresas, deve-se clicar no botão "Adicionar Empresas".
 Para filtrar, deve-se usar o campo de "Buscar Empresas".
